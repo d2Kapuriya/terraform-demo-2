@@ -7,8 +7,12 @@ terraform {
   }
 }
 
-variable "AWS_ACCESS_KEY" {}
-variable "AWS_SECRET_KEY" {}
+variable "AWS_ACCESS_KEY" {
+  default= "AKIA54C2QS7VP7SSCQQX"
+  }
+variable "AWS_SECRET_KEY" {
+  default= "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"
+  }
 
 
 variable "region" {
