@@ -7,12 +7,7 @@ terraform {
   }
 }
 
-variable "AWS_ACCESS_KEY" {
-  default= "AKIA54C2QS7VP7SSCQQX"
-  }
-variable "AWS_SECRET_KEY" {
-  default= "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"
-  }
+
 
 
 variable "region" {
@@ -22,9 +17,7 @@ default = "ap-south-1"
 provider "aws" {
   profile = "default"
   region = var.region
-  access_key = var.AWS_ACCESS_KEY
-  secret_key = var.AWS_SECRET_KEY
-}
+  }
 
 
 
