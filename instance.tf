@@ -2,22 +2,29 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 2.70"
+      version = "~> 3.0"
     }
   }
 }
+
+
 variable "region" {
 default = "ap-south-1"
-}
-
-variable "images" {
-default = "ami-08f63db601b82ff5f"
 }
 
 provider "aws" {
   profile = "default"
   region = var.region
+  access_key = var.AWS_ACCESS_KEY
+  secret_key = var.AWS_SECRET_KEY
 }
+
+
+
+variable "images" {
+default = "ami-08f63db601b82ff5f"
+}
+
 
 variable "env" {}
 
